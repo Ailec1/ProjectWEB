@@ -24,10 +24,9 @@
           </section>
         </header>
         <div id="text-zone">
-          <h1>Log In</h1>
           <div class="rectangle">
             <h2>Login</h2>
-            <p>Please enter your login and password!</p>
+            <p>Please enter your Username and Password!</p>
 
             <div class="fUsername">          
               <input type="text" id="username" required="">
@@ -145,6 +144,19 @@
     background-size: cover;
     background-position: center;
   }
+
+  .rectangle {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
   
   #text-zone {
     margin: 1.5cm;
