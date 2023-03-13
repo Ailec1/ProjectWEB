@@ -25,6 +25,26 @@
         </header>
         <div id="text-zone">
           <h1>Log In</h1>
+          <div class="rectangle">
+            <h2>Login</h2>
+            <p>Please enter your login and password!</p>
+
+            <div class="fUsername">          
+              <input type="text" id="username" required="">
+              <label>Username</label>             
+            </div>
+
+            <div class="Password">
+              <input type="password" id="typePasswordX" required="">
+              <label>Password</label>             
+            </div>
+
+            <button class="buttonlogin" type="submit">Login</button>
+            
+            <div>
+              <p class="signup">Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+          </div>
         </div>
         <footer>
           <nav>
