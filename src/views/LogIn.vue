@@ -27,22 +27,23 @@
           <div class="rectangle">
             <h2>Login</h2>
             <p>Please enter your Username and Password!</p>
+            <form>
+              <div class="box">          
+                <input type="text" id="username" required="">
+                <label>Username</label>             
+              </div>
 
-            <div class="fUsername">          
-              <input type="text" id="username" required="">
-              <label>Username</label>             
-            </div>
+              <div class="box">
+                <input type="password" id="typePasswordX" required="">
+                <label>Password</label>             
+              </div>
 
-            <div class="Password">
-              <input type="password" id="typePasswordX" required="">
-              <label>Password</label>             
-            </div>
+              <button class="buttonlogin" type="submit">Login</button>
 
-            <button class="buttonlogin" type="submit">Login</button>
-
-            <div>
-              <p class="signup">Don't have an account? <router-link class="site" to="signup">Sign Up</router-link></p>
-            </div>
+              <div>
+                <p class="signup">Don't have an account? <router-link class="site" to="signup">Sign Up</router-link></p>
+              </div>
+            </form>
           </div>
         </div>
         <footer>
@@ -157,6 +158,46 @@
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
 }
+
+.rectangle h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.rectangle p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.rectangle .user label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.rectangle .user .buttonlogin{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .5s;
+}
+
   
   #text-zone {
     margin: 1.5cm;
