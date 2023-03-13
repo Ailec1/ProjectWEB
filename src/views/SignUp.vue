@@ -24,7 +24,24 @@
           </section>
         </header>
         <div id="text-zone">
-          <h1>Sign Up</h1>
+          <div class="rectangle">
+            <h2>Sign Up</h2>
+            <p>Please enter a Username and a Password!</p>
+            <form>
+              <div class="box">          
+                <input type="text" id="username" required="">
+                <label>Username</label>             
+              </div>
+
+              <div class="box">
+                <input type="password" id="typePasswordX" required="">
+                <label>Password</label>             
+              </div>
+
+              <button class="buttonlogin" type="submit">Sign Up</button>
+
+            </form>
+          </div>
         </div>
         <footer>
           <nav>

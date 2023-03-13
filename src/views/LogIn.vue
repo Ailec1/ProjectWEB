@@ -215,6 +215,14 @@
   font-size: 17px;
 }
 
+.rectangle input:focus ~ label,
+.rectangle input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
   
   #text-zone {
     margin: 1.5cm;
