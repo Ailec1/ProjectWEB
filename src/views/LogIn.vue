@@ -148,7 +148,7 @@
 
   .rectangle {
     position: absolute;
-    top: 75%;
+    top: 50%;
     left: 50%;
     width: 400px;
     padding: 40px;
@@ -173,15 +173,31 @@
     color: #fff;
 }
 
-.rectangle .user label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
+
+.rectangle{
+  position: relative;
+}
+
+.rectangle input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.recatngle label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
 }
 
 .rectangle .buttonlogin{
