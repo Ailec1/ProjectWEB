@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
+    HI
     <h1>Vue.js examples</h1>
     <div class="container">
       <router-link id="web" to="web-project">Web Project</router-link>
