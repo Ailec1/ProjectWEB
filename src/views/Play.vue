@@ -35,7 +35,7 @@
         <h2>Play!/h2>
         <h3>Click here to play</h3>
           <form id="play">
-            <input type="submit" formaction="../"lien projet" id="play" >
+            <input type="submit"  id="play">Play></input>
           </form>
       </div>
       <footer>
