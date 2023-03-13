@@ -29,6 +29,10 @@
             <p class="sentence">Please enter a Username and a Password!</p>
             <form>
               <div class="box">          
+                <input type="email" id="email" required="">
+                <label>Email</label>             
+              </div>
+              <div class="box">          
                 <input type="text" id="username" required="">
                 <label>Username</label>             
               </div>
