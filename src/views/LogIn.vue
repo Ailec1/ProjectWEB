@@ -185,17 +185,18 @@
 }
 
 .rectangle .user .buttonlogin{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px 20px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: .5s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.9rem 2.5rem;
+  text-align: center;
+  background-color: #47AB11;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 17px;
 }
 
   
