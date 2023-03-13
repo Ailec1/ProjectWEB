@@ -184,7 +184,7 @@
     transition: .5s;
 }
 
-.rectangle .user .buttonlogin{
+.rectangle .buttonlogin{
   outline: none;
   border: none;
   cursor: pointer;
@@ -192,7 +192,7 @@
   margin: 0 auto;
   padding: 0.9rem 2.5rem;
   text-align: center;
-  background-color: #47AB11;
+  background-color: #119cab;
   color: #fff;
   border-radius: 4px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);

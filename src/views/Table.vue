@@ -220,4 +220,6 @@
     border: 2px solid;
     padding: 10px;
   }
+
+}
   </style>
