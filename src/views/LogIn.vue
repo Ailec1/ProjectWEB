@@ -40,9 +40,9 @@
             </div>
 
             <button class="buttonlogin" type="submit">Login</button>
-            
+
             <div>
-              <p class="signup">Don't have an account? <a href="signup.html">Sign Up</a></p>
+              <p class="signup">Don't have an account? <router-link class="site" to="signup">Sign Up</router-link></p>
             </div>
           </div>
         </div>
