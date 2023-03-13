@@ -26,7 +26,7 @@
         <div id="text-zone">
           <div class="rectangle">
             <h2>Login</h2>
-            <p>Please enter your Username and Password!</p>
+            <p class="sentence">Please enter your Username and Password!</p>
             <form>
               <div class="box">          
                 <input type="text" id="username" required="">
@@ -37,9 +37,8 @@
                 <input type="password" id="typePasswordX" required="">
                 <label>Password</label>             
               </div>
-
               <button class="buttonlogin" type="submit">Login</button>
-
+              <span></span>
               <div>
                 <p class="signup">Don't have an account? <router-link class="site" to="signup">Sign Up</router-link></p>
               </div>
@@ -146,39 +145,41 @@
     background-position: center;
   }
 
-  .rectangle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+  .rectangle p{
+    color: white;
+    text-align: center;
+  }
+
+  .rectangle{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.rectangle .sentence{
+  margin-bottom: 15px;
 }
 
 .rectangle h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
 }
 
-.rectangle p {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    color: #fff;
-}
-
-
-.rectangle{
+.rectangle .box {
   position: relative;
+
 }
 
-.rectangle input {
+.rectangle .box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -189,7 +190,7 @@
   outline: none;
   background: transparent;
 }
-.recatngle label {
+.rectangle .box label {
   position: absolute;
   top:0;
   left: 0;
@@ -198,6 +199,14 @@
   color: #fff;
   pointer-events: none;
   transition: .5s;
+}
+
+.rectangle .box input:focus ~ label,
+.rectangle .box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
 }
 
 .rectangle .buttonlogin{
@@ -215,12 +224,8 @@
   font-size: 17px;
 }
 
-.rectangle input:focus ~ label,
-.rectangle input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
+.rectangle .signup{
+  margin-top: 20px;
 }
 
   
