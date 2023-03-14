@@ -24,7 +24,7 @@
               <li>
                 <router-link class="site" to="signup">Sign Up</router-link>
               </li>
-              <li id="play">
+              <li id="play" class="active">
                 <router-link class="site" to="play">Play</router-link>
               </li>
             </ul>
