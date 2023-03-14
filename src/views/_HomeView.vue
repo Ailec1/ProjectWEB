@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png" />
     <h1>Vue.js examples</h1>
     <div class="container">
-      <router-link id="web" to="web-project">Web Project</router-link>
+      <router-link id="web" to="play">Web Project</router-link>
     </div>
   </div>
 </template>
