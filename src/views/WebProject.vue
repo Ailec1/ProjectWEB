@@ -26,6 +26,9 @@
       <div id="text-zone">
         <h1>Home</h1>
       </div>
+      <div>
+      <p>Welcome to our own online Pokegame! Here, you can lead your favorite pokemon in a platform world with the keygboard arrows and vanquish ennemies:the terrible Ratatas !</p>
+      </div>
       <footer>
         
       </footer>
