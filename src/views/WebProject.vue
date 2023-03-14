@@ -13,23 +13,33 @@
         <section>
           <div class="principale">
             <ul>
-              <li class="active"><router-link class="site" to="web-project">Home</router-link></li>
-              <li><router-link class="site" to="pokedex">Pokedex</router-link></li>
-              <li><router-link class="site" to="table">Table</router-link></li>
+              <li class="active">
+                <router-link class="site" to="web-project">Home</router-link>
+              </li>
+              <li>
+                <router-link class="site" to="pokedex">Pokedex</router-link>
+              </li>
+              <li><router-link class="site" to="table">Score</router-link></li>
               <li><router-link class="site" to="login">Log In</router-link></li>
-              <li><router-link class="site" to="signup">Sign Up</router-link></li>
-              <li id="play"><router-link class="site" to="play">Play</router-link></li>
+              <li>
+                <router-link class="site" to="signup">Sign Up</router-link>
+              </li>
+              <li id="play">
+                <router-link class="site" to="play">Play</router-link>
+              </li>
             </ul>
           </div>
         </section>
       </header>
       <div id="text-zone">
         <h1>Home</h1>
-      <p>Welcome to our own online Pokegame! Here, you can lead your favorite pokemon in a platform world with the keygboard arrows and vanquish ennemies:the terrible Ratatas !</p>
-      </div>
-      <footer>
-        
-      </footer>
+        <p>
+          Welcome to our own online Pokegame! Here, you can lead your favorite
+          pokemon in a platform world with the keygboard arrows and vanquish
+          ennemies: the terrible Ratatas !
+        </p>
+        </div>
+      <footer></footer>
     </body>
   </html>
 </template>
@@ -69,9 +79,9 @@ header {
   font-style: oblique;
 }
 
-h1{
-    font-size: 45px;
-    text-transform: uppercase;
+h1 {
+  font-size: 45px;
+  text-transform: uppercase;
 }
 ul {
   font-size: 15px;
@@ -98,7 +108,7 @@ ul li a:hover {
 }
 
 .active a {
-  background: #003554 ;
+  background: #003554;
   color: white;
 }
 

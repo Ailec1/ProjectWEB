@@ -19,7 +19,7 @@
               <li>
                 <router-link class="site" to="pokedex">Pokedex</router-link>
               </li>
-              <li><router-link class="site" to="table">Table</router-link></li>
+              <li><router-link class="site" to="table">Score</router-link></li>
               <li><router-link class="site" to="login">Log In</router-link></li>
               <li>
                 <router-link class="site" to="signup">Sign Up</router-link>
