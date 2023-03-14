@@ -27,9 +27,7 @@
         <h1>Home</h1>
       </div>
       <footer>
-        <nav>
-          <a href="../html/a%20propos.html">Contact</a>
-        </nav>
+        
       </footer>
     </body>
   </html>
@@ -58,7 +56,7 @@ export default {
 }
 header,
 footer {
-  background-color: rgba(24, 2, 83, 0.6);
+  background-color: #119cab;
 }
 header {
   display: flex;
@@ -94,12 +92,12 @@ ul li a {
 }
 
 ul li a:hover {
-  background: rgba(24, 2, 83, 0.6);
+  background: #003554;
   color: white;
 }
 
 .active a {
-  background: rgba(24, 2, 83, 0.6);
+  background: #003554 ;
   color: white;
 }
 
