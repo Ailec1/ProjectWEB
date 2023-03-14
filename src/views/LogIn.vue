@@ -40,7 +40,7 @@
               <button class="buttonlogin" type="submit">Login</button>
               <span></span>
               <div>
-                <p class="signup">Don't have an account? <router-link class="site" to="signup">Sign Up</router-link></p>
+                <p class="signup">Don't have an account? <router-link class="sign" to="signup">Sign Up</router-link></p>
               </div>
             </form>
           </div>
@@ -146,9 +146,11 @@
   border-radius: 4px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   font-size: 17px;
+  margin-bottom: 15px;
 }
 
-.rectangle .signup{
-  margin-top: 20px;
+.rectangle .sign{
+  color: white;
+  text-decoration: none;
 }
   </style>
