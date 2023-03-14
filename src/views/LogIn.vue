@@ -153,4 +153,9 @@
   color: white;
   text-decoration: none;
 }
+
+.sign:hover{
+  color: #03e9f4;
+}
+
   </style>
