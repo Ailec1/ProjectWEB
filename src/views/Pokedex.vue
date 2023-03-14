@@ -111,11 +111,8 @@
 #ruban7{
   background-color: #80dce9;
 }
-#ruban10{
-  background-color: #b0bc24;
-}
-#ruban13{
-  background-color: #b0bc24;
+#ruban10, #ruban13{
+  background-color: #c8d44b;
 }
 #ruban19{
   background-color: #a7a7a7;
@@ -123,6 +120,10 @@
 .pokemon-image{
   height: 200px;
   width: 200px;
+  transition: transform 3s;
+}
+.pokemon-image:hover{
+  transform: rotate(360deg);
 }
 .pokemon-text{
   display: flex;
