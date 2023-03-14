@@ -24,7 +24,7 @@
               <li>
                 <router-link class="site" to="signup">Sign Up</router-link>
               </li>
-              <li id="play" class="active">
+              <li id="play">
                 <router-link class="site" to="play">Play</router-link>
               </li>
             </ul>
@@ -56,5 +56,7 @@ export default {
   },
 };
 </script>
+
+
   
 
