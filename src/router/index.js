@@ -3,7 +3,7 @@ import HomeView from '../views/_HomeView.vue'
 
 import WebProject from '../views/WebProject.vue'
 import Pokedex from '../views/Pokedex.vue'
-import Table from '../views/Table.vue'
+import Score from '../views/Score.vue'
 import LogIn from '../views/LogIn.vue'
 import SignUp from '../views/SignUp.vue'
 import Play from '../views/Play.vue'
@@ -25,9 +25,9 @@ const routes = [
     component: Pokedex
   },
   {
-    path: '/table',
-    name: 'table',
-    component: Table
+    path: '/score',
+    name: 'score',
+    component: Score
   },
   {
     path: '/login',
