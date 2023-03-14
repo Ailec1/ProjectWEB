@@ -23,7 +23,7 @@
             </div>
           </section>
         </header>
-               <div id="text-zone">
+          <div id="text-zone">
           <h1>Table</h1>
 
           <table name="table" class="datatable">
@@ -54,9 +54,7 @@
                 </table>
         </div>
         <footer>
-          <nav>
-            <a href="../html/a%20propos.html">Contact</a>
-          </nav>
+          
         </footer>
       </body>
     </html>

@@ -27,9 +27,7 @@
           <h1>Pokedex</h1>
         </div>
         <footer>
-          <nav>
-            <a href="../html/a%20propos.html">Contact</a>
-          </nav>
+          
         </footer>
       </body>
     </html>
