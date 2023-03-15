@@ -76,9 +76,9 @@
 
   .rectangle{
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
-  width: 400px;
+  width: 500px;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgb(24, 2, 83);
@@ -87,11 +87,12 @@
 }
 
 .rectangle .sentence{
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .rectangle h2 {
-  margin: 0 0 30px;
+  margin: 0 0 40px;
+  margin-top: 20px;
   padding: 0;
   color: #fff;
   text-align: center;
@@ -145,11 +146,16 @@
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   font-size: 17px;
   margin-bottom: 15px;
+  margin-top: 30px;
 }
 
 .rectangle .sign{
   color: white;
   text-decoration: none;
+}
+
+.rectangle .signup{
+  margin-top: 20px;
 }
 
 .sign:hover{
