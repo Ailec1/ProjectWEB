@@ -26,7 +26,7 @@
         <div id="text-zone">
           <div class="rectangle">
             <h2>Sign Up</h2>
-            <p class="sentence">Please enter your Email adress, a Username and a Password!</p>
+            <p class="sentence">Please enter your Email adress, an Username and a Password!</p>
             <form>
               <div class="box">          
                 <input type="email" id="email" required="">
