@@ -7,6 +7,9 @@ import Score from '../views/Score.vue'
 import LogIn from '../views/LogIn.vue'
 import SignUp from '../views/SignUp.vue'
 import Play from '../views/Play.vue'
+import Bulbagame from '../views/Bulbagame.vue'
+import Squirtgame from '../views/Squirtgame.vue'
+
 
 const routes = [
   {
@@ -43,6 +46,16 @@ const routes = [
     path: '/play',
     name: 'play',
     component: Play
+  },
+  {
+    path: '/bulbagame',
+    name: 'bulbagame',
+    component: Bulbagame
+  },
+  {
+    path: '/squirtgame',
+    name: 'squirtgame',
+    component: Squirtgame
   }
 ]
 

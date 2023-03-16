@@ -30,11 +30,13 @@
       </header>
       <div id="text-zone">
         <h1>Play</h1>
-        <div class="ruban" id="ruban1">
+        <div class="ruban-jeu" id="jeu1">
           <img class="pokemon-image" src="../assets/Shuffle001.png" alt="Description de l'image">
           <div class="pokemon-text">
-            <h4 class="pokemon-name">BulbaPlay</h4>
-          <p class="pokemon-description">Play with Bulbasaur!</p>
+            <router-link class="site" to="bulbagame">
+              <h4 class="pokemon-name">BulbaPlay</h4>
+            </router-link>
+            <p class="pokemon-description">Play with Bulbasaur!</p>
           </div>
         </div>
     
@@ -49,7 +51,9 @@
         <div class="ruban" id="ruban7">
           <img class="pokemon-image" src="../assets/Shuffle007.png" alt="Description de l'image">
           <div class="pokemon-text">
-            <h4 class="pokemon-name">Squirtle's Aquatic Adventure</h4>
+            <router-link class="site" to="squirtgame">
+              <h4 class="pokemon-name">Squirtle's Aquatic Adventure</h4>
+            </router-link>
           <p class="pokemon-description">Play with Squirtle!</p>
           </div>
         </div>
@@ -75,6 +79,16 @@ export default {
 };
 </script>
 
-
-  
-
+<style>
+  .ruban-jeu {
+  display: flex; /* Utilisation de Flexbox pour centrer les éléments */
+  align-items: center; /* Centrage vertical */
+  height: 200px;
+  background-color: rgba(105, 107, 106, 0.635);
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 20px;
+}
+#jeu1{
+  background-color: #9be7c1;
+}</style>
