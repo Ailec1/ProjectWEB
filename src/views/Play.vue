@@ -9,84 +9,83 @@
       <title>Document</title>
     </head>
     <body>
-      <header>
-        <section>
-          <div class="principale">
-            <ul>
-              <li id="play">
-                <router-link class="site" to="play">Play</router-link>
-              </li>
-              <li>
-                <router-link class="site" to="pokedex">Pokedex</router-link>
-              </li>
-              <li><router-link class="site" to="score">Score</router-link></li>
-            </ul>
-          </div>
-        </section>
-      </header>
-      <div id="text-zone">
-        <h1>Play</h1>
-        <div class="ruban-jeu" id="jeu1">
-          <img class="pokemon-image" src="../assets/Shuffle001.png" alt="Description de l'image">
-          <div class="pokemon-text">
-            <router-link class="site" to="squirtgame">
-              <h4 class="pokemon-name">BulbaPlay</h4>
-            </router-link>
-            <p class="pokemon-description">Play with Bulbasaur!</p>
-          </div>
+      <div v-if="loginVisible" class="overlay"></div>
+      <div class="content-container" :class="{ blurred: loginVisible }">
+        <!-- Contenu de votre page ici -->
+        <div class="tete">
+          <section>
+            <div class="principale">
+              <ul>
+                <li id="play">
+                  <router-link class="site" to="play">Play</router-link>
+                </li>
+                <li>
+                  <router-link class="site" to="pokedex">Pokedex</router-link>
+                </li>
+                <li>
+                  <router-link class="site" to="score">Score</router-link>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
-    
-        <div class="ruban" id="ruban4">
-          <img class="pokemon-image" src="../assets/Shuffle004.png" alt="Description de l'image">
-          <div class="pokemon-text">
-            <router-link class="site" to="squirtgame">
-              <h4 class="pokemon-name">Gamender</h4>
-            </router-link>
-          <p class="pokemon-description">Play with Charmander!</p>
+        <div id="text-zone">
+          <h1>Play</h1>
+
+          <div class="ruban-jeu" id="jeu1">
+            <img
+              class="pokemon-image"
+              src="../assets/Shuffle001.png"
+              alt="Description de l'image"
+            />
+            <div class="pokemon-text">
+              <router-link class="site" to="squirtgame">
+                <h4 class="pokemon-name">BulbaPlay</h4>
+              </router-link>
+              <p class="pokemon-description">Play with Bulbasaur!</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="ruban" id="ruban7">
-          <img class="pokemon-image" src="../assets/Shuffle007.png" alt="Description de l'image">
-          <div class="pokemon-text">
-            <router-link class="site" to="squirtgame">
-              <h4 class="pokemon-name">Squirtle's Aquatic Adventure</h4>
-            </router-link>
-          <p class="pokemon-description">Play with Squirtle!</p>
+
+          <div class="ruban" id="ruban4">
+            <img
+              class="pokemon-image"
+              src="../assets/Shuffle004.png"
+              alt="Description de l'image"
+            />
+            <div class="pokemon-text">
+              <router-link class="site" to="squirtgame">
+                <h4 class="pokemon-name">Gamender</h4>
+              </router-link>
+              <p class="pokemon-description">Play with Charmander!</p>
+            </div>
+          </div>
+
+          <div class="ruban" id="ruban7">
+            <img
+              class="pokemon-image"
+              src="../assets/Shuffle007.png"
+              alt="Description de l'image"
+            />
+            <div class="pokemon-text">
+              <router-link class="site" to="squirtgame">
+                <h4 class="pokemon-name">Squirtle's Aquatic Adventure</h4>
+              </router-link>
+              <p class="pokemon-description">Play with Squirtle!</p>
+            </div>
           </div>
         </div>
       </div>
-      <footer>
-        
-      </footer>
+      <footer></footer>
     </body>
   </html>
 </template>
   
   <script>
 export default {
-  name: "DStyleBindings",
+  name: "PlayVue",
   data() {
     return {
-      is_square1_red: false,
-      is_square1_blue: false,
-      is_square2_rotated: false,
-      someColor: "gray",
     };
-  },
-};
-</script>
+  }}
 
-<style>
-  .ruban-jeu {
-  display: flex; /* Utilisation de Flexbox pour centrer les éléments */
-  align-items: center; /* Centrage vertical */
-  height: 200px;
-  background-color: rgba(105, 107, 106, 0.635);
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 20px;
-}
-#jeu1{
-  background-color: #9be7c1;
-}</style>
+</script>
