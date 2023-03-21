@@ -16,9 +16,6 @@
                 <li id="play"><router-link class="site" to="play">Play</router-link></li>
                 <li class="active"><router-link class="site" to="pokedex">Pokedex</router-link></li>
                 <li><router-link class="site" to="score">Score</router-link></li>
-                <li><router-link class="site" to="login">Log In</router-link></li>
-                <li><router-link class="site" to="signup">Sign Up</router-link></li>
-
               </ul>
             </div>
           </section>
