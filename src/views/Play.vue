@@ -33,7 +33,7 @@
         <div class="ruban-jeu" id="jeu1">
           <img class="pokemon-image" src="../assets/Shuffle001.png" alt="Description de l'image">
           <div class="pokemon-text">
-            <router-link class="site" to="bulbagame">
+            <router-link class="site" to="squirtgame">
               <h4 class="pokemon-name">BulbaPlay</h4>
             </router-link>
             <p class="pokemon-description">Play with Bulbasaur!</p>
@@ -43,7 +43,9 @@
         <div class="ruban" id="ruban4">
           <img class="pokemon-image" src="../assets/Shuffle004.png" alt="Description de l'image">
           <div class="pokemon-text">
-            <h4 class="pokemon-name">Gamender</h4>
+            <router-link class="site" to="squirtgame">
+              <h4 class="pokemon-name">Gamender</h4>
+            </router-link>
           <p class="pokemon-description">Play with Charmander!</p>
           </div>
         </div>

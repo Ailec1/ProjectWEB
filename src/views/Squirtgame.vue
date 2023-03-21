@@ -22,7 +22,7 @@
         </section>
       </header>
       <div id="squirt-zone">
-        <h1>Squirtle's Aquatic Adventure</h1>
+        <!-- <h1>Squirtle's Aquatic Adventure</h1> -->
         <div>
           <iframe id="squirtgame" src="game/Project.html" frameborder="0"></iframe>
         </div>
