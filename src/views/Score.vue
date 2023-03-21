@@ -41,21 +41,21 @@
               <td>Time</td>
             </tr>
           </thead>
-          <tbody>
+          <tbody v-for="user in users" :key="user.id">
             <tr>
-              <td>ArT2022</td>
-              <td>20556</td>
-              <td>1:26</td>
+              <td>{{username}}</td>
+              <td>{{score}}</td>
+              <td>{{time}}</td>
             </tr>
             <tr>
-              <td>mev</td>
-              <td>54689</td>
-              <td>13:45</td>
+              <td>{{username}}</td>
+              <td>{{score}}</td>
+              <td>{{time}}</td>
             </tr>
             <tr>
-              <td>ailec</td>
-              <td>4444</td>
-              <td>1:14</td>
+              <td>#{{username}}</td>
+              <td>{{score}}</td>
+              <td>{{time}}</td>
             </tr>
           </tbody>
         </table>
@@ -74,9 +74,15 @@ export default {
       is_square1_blue: false,
       is_square2_rotated: false,
       someColor: "gray",
+      users: [],
     };
+    
   },
 };
+
+
+
+
 </script>
   
   <style lang="scss">
