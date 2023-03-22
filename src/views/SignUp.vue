@@ -65,53 +65,51 @@
               </div>
             </section>
           </div>
-          <div id="pokedex-zone">
-          <h1>Pokedex</h1>
-          <p id="pokedex-description">
-            Welcome to your Pokedex! Here, you can access information on all kinds of Pokemon!
-          </p>
-          <div class="ruban" id="ruban1">
-            <img class="pokemon-image" src="../assets/Shuffle001.png" alt="Description de l'image">
+          <div id="text-zone">
+          <h1>Play</h1>
+
+          <div class="rubane" id="ruban-bulbizarre">
+            <img
+              class="pokemon-image"
+              src="../assets/Shuffle001.png"
+              alt="Description de l'image"
+            />
             <div class="pokemon-text">
-              <h4 class="pokemon-name">Bulbasaur</h4>
-            <p class="pokemon-description">Innocent and carefree, Bulbasaur loves to wander around on its own. However, the problem is that it doesn't always realize the dangers around it and sometimes ends up getting lost in hazardous places, such as a volcano! Help it avoid the fire attacks of wild Pokémon! It's really hot and burning!</p>
-            </div>
-          </div>
-      
-          <div class="ruban" id="ruban4">
-            <img class="pokemon-image" src="../assets/Shuffle004.png" alt="Description de l'image">
-            <div class="pokemon-text">
-              <h4 class="pokemon-name">Charmander</h4>
-            <p class="pokemon-description">Charmander is a shy creature that doesn't like much. However, it's very popular among its peers who would love to give it hugs. With its pretty flaming tail and its tough-guy attitude, Charmander is a true CHAD in its neighborhood!</p>
+              <router-link class="site" to="squirtgame">
+                <h4 class="pokemon-name">
+                  <a>BulbaPlay</a>
+                </h4>
+              </router-link>
+              <p class="pokemon-description">Play with Bulbasaur!</p>
             </div>
           </div>
           
-          <div class="ruban" id="ruban7">
-            <img class="pokemon-image" src="../assets/Shuffle007.png" alt="Description de l'image">
+          <div class="rubane" id="ruban-salameche">
+            <img
+              class="pokemon-image"
+              src="../assets/Shuffle004.png"
+              alt="Description de l'image"
+            />
             <div class="pokemon-text">
-              <h4 class="pokemon-name">Squirtle</h4>
-            <p class="pokemon-description">Squirtle is quite carefree because it believes its shell is the strongest on the planet! But despite its tough-guy appearance, Squirtle is a cute creature that loves to eat bubbles! Splash!</p>
+              <router-link class="site" to="squirtgame">
+                <h4 class="pokemon-name">Gamender</h4>
+              </router-link>
+              <p class="pokemon-description">Play with Charmander!</p>
             </div>
           </div>
-          <div class="ruban" id="ruban10">
-            <img class="pokemon-image" src="../assets/Shuffle010.png" alt="Description de l'image">
+      
+
+          <div class="rubane" id="ruban-carapuce">
+            <img
+              class="pokemon-image"
+              src="../assets/Shuffle007.png"
+              alt="Description de l'image"
+            />
             <div class="pokemon-text">
-              <h4 class="pokemon-name">Caterpie</h4>
-            <p class="pokemon-description">Caterpie doesn't have many friends... It's always been rejected in its life. That's why it can be a bit clingy and won't hesitate to touch you without your consent... Be careful not to touch it because it can sting you despite its innocent appearance!</p>
-            </div>
-          </div>
-          <div class="ruban" id="ruban13">
-            <img class="pokemon-image" src="../assets/Shuffle013.png" alt="Description de l'image">
-            <div class="pokemon-text">
-              <h4 class="pokemon-name">Weedle</h4>
-            <p class="pokemon-description">Weedle is much more popular than its cousin Caterpie. However, it tends to break down people who approach it. Indeed, toxic relationships are something it's familiar with! Don't even try to squash it! Run away instead!</p>
-            </div>
-          </div>
-          <div class="ruban" id="ruban19">
-            <img class="pokemon-image" src="../assets/Shuffle019.png" alt="Description de l'image">
-            <div class="pokemon-text">
-              <h4 class="pokemon-name">Rattata</h4>
-            <p class="pokemon-description">Rattata is a creature that has always been chased and persecuted because it's "dirty" according to most people. That's why it has a speed that should absolutely not be underestimated!</p>
+              <router-link class="site" to="squirtgame">
+                <h4 class="pokemon-name">Squirtle's Aquatic Adventure</h4>
+              </router-link>
+              <p class="pokemon-description">Play with Squirtle!</p>
             </div>
           </div>
         </div>
