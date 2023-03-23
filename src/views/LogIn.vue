@@ -16,7 +16,7 @@
             <input type="password" id="typePasswordX" required="" />
             <label>Password</label>
           </div>
-          <button class="buttonlogin" type="submit">Log In</button>
+          <button @click="login" class="buttonlogin" type="submit">Log In</button>
           <span></span>
           <div>
             <div class="signup">
@@ -109,6 +109,10 @@ export default {
       loginPosition: "50%",
       loginVisible: false,
       blurBackground: false,
+      username: "",
+      password: "",
+      isLoggedIn: false,
+      token: ""
     };
   },
   mounted() {
@@ -120,10 +124,99 @@ export default {
   beforeMounted() {
     window.removeEventListener("scroll", this.updateLoginPosition);
   },
+
+  props: {
+    msg: String
+  },
+
   methods: {
     updateLoginPosition() {
       this.loginPosition = `${50 + window.pageYOffset / 8}%`;
     },
-  },
-};
+    
+    login: function () {
+      var component = this
+      let options = {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: component.username,
+          password: component.password
+        })
+      }
+      fetch('/api/login', options)
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+          component.isLoggedIn = true
+          component.token = data.token
+        })
+        .catch((error) => {
+          console.log(error)
+          component.isLoggedIn = false
+        })
+    },
+    check: function () {
+      var component = this
+      let options = {
+        method: "GET",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': component.token
+        }
+      }
+      fetch('/api/login/check', options)
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+          component.isLoggedIn = data.isLoggedIn
+        })
+    },
+    getUsersCorrect: function () {
+      var component = this
+      let options = {
+        method: "GET",
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': component.token
+        }
+      }
+      fetch('/api/users', options)
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+          console.log(data)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    },
+    getUsersWrong: function () {
+    var component = this
+    let options = {
+      method: "GET",
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': component.token
+      }
+    }
+    fetch('/api/users', options)
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        console.log(data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+  }
+}
+
 </script>
