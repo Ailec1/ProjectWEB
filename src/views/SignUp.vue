@@ -8,16 +8,16 @@
             <p class="sentence">Please enter an Email, an Username and a Password.</p>
             <form>
               <div class="box">          
-                <input type="email" id="email" required="">
+                <input v-model="user.email" type="email" id="email" required="">
                 <label>Email</label>             
               </div>
               <div class="box">          
-                <input type="text" id="username" required="">
+                <input v-model="user.username" type="text" id="username" required="">
                 <label>Username</label>             
               </div>
 
               <div class="box">
-                <input type="password" id="typePasswordX" required="">
+                <input v-model="user.password" type="password" id="typePasswordX" required="">
                 <label>Password</label>             
               </div>
 
@@ -26,7 +26,7 @@
               <div class="login">
               <p style="color:white">
                 Already have an account ?              
-                <router-link class="sign" to="login">Log In</router-link>
+                <router-link class="sign" @click="login">Log In</router-link>
               </p>
               <div>
                   <router-link class="site" to="play">Play</router-link>
@@ -147,12 +147,18 @@ import UserDataService from '@/services/UserDataService';
           console.log(e)
         })
     },
+    
     beforeMounted() {
       window.removeEventListener("scroll", this.updateLoginPosition);
     },
     methods: {
       signup() {
-        UserDataService.create(this.user)
+        const data={
+          username: this.user.username,
+          email: this.user.email,
+          password: this.user.password,
+        }
+        UserDataService.create(data)
           .then(response =>{
             this.user.id = response.data.id
             console.log(response.data)
@@ -165,6 +171,10 @@ import UserDataService from '@/services/UserDataService';
         
       updateLoginPosition() {
         this.loginPosition = `${50 + window.pageYOffset / 8}%`;
+      },
+      login () {
+        this.$router.push({ name: 'login' })
+
       },
     },
   };

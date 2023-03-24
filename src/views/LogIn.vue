@@ -8,12 +8,12 @@
         <p class="sentence">Please enter your Username and Password.</p>
         <form>
           <div class="box">
-            <input type="text" id="username" required="" />
+            <input type="text" v-model="user.username" id="username" required="" />
             <label>Username</label>
           </div>
 
           <div class="box">
-            <input type="password" id="typePasswordX" required="" />
+            <input v-model="user.password" type="password" id="typePasswordX" required="" />
             <label>Password</label>
           </div>
           <button class="buttonlogin" type="submit" @click="login">Log In</button>
@@ -22,14 +22,13 @@
             <div class="signup">
               <p style="color:white">
                 Don't have an account ?               
-                <router-link class="sign" to="signup">Sign Up</router-link>
+                <router-link class="sign" @click="signup">Sign Up</router-link>
               </p>
             </div>
           </div>
         </form>
       </div>
 
-      
       <div v-if="loginVisible" class="overlay"></div>
       <div class="content-container" :class="{ blurred: loginVisible }">
         <!-- Contenu de votre page ici -->
@@ -134,21 +133,31 @@ export default {
     window.removeEventListener("scroll", this.updateLoginPosition);
   },
   methods: {
-    login() {
-      const data = {
-        username: this.user.username,
-        password: this.user.password,
-      }
-      UserDataService.auth(data)
-          .then(response =>{
-            this.user.id = response.data.id
-            console.log(response.data)
-            this.submitted = true
-          })
-          .catch(e =>{
-            console.log(e)
-          })
+    signup() {
+      this.$router.push({ name: 'signup' })
     },
+    login() {
+        const data = {
+          username: this.user.username,
+          password: this.user.password
+        }
+        console.log(data)
+        if (this.user.username === '' || this.user.password === '') return alert('Please fill in all fields')
+        else {
+          UserDataService.postLogin(data)
+            .then((response) => {
+              console.log(response.data.user)
+              // localStorage.setItem('token', response.data.token)
+              // this.$store.dispatch('user', response.user)
+              this.$router.push({ name: 'home' })
+            })
+            .catch(error => {
+              // Handle the error here
+              alert('Woulah ca marche pas')
+              alert(error + 'woulah ca marche pas')
+            })
+        }
+      },
     updateLoginPosition() {
       this.loginPosition = `${50 + window.pageYOffset / 8}%`;
     },

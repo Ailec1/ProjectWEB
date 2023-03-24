@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import ScoreDataService from "./services/ScoreDataService";
-import UserDataService from "./services/UserDataService";
+/* import ScoreDataService from "./services/ScoreDataService";
+import UserDataService from "./services/UserDataService"; */
 
 
 export default {
@@ -20,7 +20,7 @@ export default {
     };
   },
   mounted() {
-    ScoreDataService.getAll()
+    /* ScoreDataService.getAll()
       .then(response => {
         this.inventory = response.data;
         console.log(response.data);
@@ -35,7 +35,7 @@ export default {
       })
       .catch(e => {
         console.log(e);
-      });
+      }); */
     }
 };
 
