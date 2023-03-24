@@ -34,24 +34,12 @@
             <tr>
               <td>Pseudo</td>
               <td>Score</td>
-              <td>Time</td>
             </tr>
           </thead>
-          <tbody v-for="user in users" :key="user.id">
+          <tbody v-for="user in inventory" :key="user.id">
             <tr>
-              <td>{{username}}</td>
-              <td>{{score}}</td>
-              <td>{{time}}</td>
-            </tr>
-            <tr>
-              <td>{{username}}</td>
-              <td>{{score}}</td>
-              <td>{{time}}</td>
-            </tr>
-            <tr>
-              <td>#{{username}}</td>
-              <td>{{score}}</td>
-              <td>{{time}}</td>
+              <td>{{user.username}}</td>
+              <td>{{user.score}}</td>
             </tr>
           </tbody>
         </table>
@@ -75,10 +63,6 @@ export default {
     
   },
 };
-
-
-
-
 </script>
   
   <style lang="scss">

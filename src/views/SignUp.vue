@@ -21,7 +21,7 @@
                 <label>Password</label>             
               </div>
 
-              <button class="buttonlogin" type="submit">Sign Up</button>
+              <button class="buttonlogin" type="submit" @click="signup">Sign Up</button>
 
               <div class="login">
               <p style="color:white">
@@ -117,6 +117,7 @@
   </template>
     
     <script>
+import UserDataService from '@/services/UserDataService';
   export default {
     name: "PlayVue",
     data() {
@@ -124,6 +125,11 @@
         loginPosition: "50%",
         loginVisible: false,
         blurBackground: false,
+        user: {
+          email: "",
+          username: "",
+          password: "",
+        },
       };
     },
     mounted() {
@@ -131,11 +137,32 @@
         this.loginVisible = true;
       }, 100);
       window.addEventListener("scroll", this.updateLoginPosition);
+
+      UserDataService.getAll()
+        .then(response => {
+          this.user = response.data
+          console.log(response.data)
+        })
+        .catch(e => {
+          console.log(e)
+        })
     },
     beforeMounted() {
       window.removeEventListener("scroll", this.updateLoginPosition);
     },
     methods: {
+      signup() {
+        UserDataService.create(this.user)
+          .then(response =>{
+            this.user.id = response.data.id
+            console.log(response.data)
+            this.submitted = true
+          })
+          .catch(e =>{
+            console.log(e)
+          })
+      },
+        
       updateLoginPosition() {
         this.loginPosition = `${50 + window.pageYOffset / 8}%`;
       },
