@@ -83,10 +83,6 @@
             :key="game.id"
           />
       </div> -->
-      
-
-
-
       <footer></footer>
     </body>
   </html>

@@ -19,7 +19,7 @@
       <div id="pokedex-zone">
         <h1>Pokedex</h1>
         <p id="pokedex-presentation">
-          In this page, you will find the pokemons of the Little Cup of the first generation. But what is the <a href="https://www.smogon.com/dex/sm/formats/lc/" style="color:#53145c; font-size:28px; font-weight:600">Little Cup</a> ?
+          In this page, you will find the pokemons of the Little Cup of the first generation. But what is the <a href="https://www.smogon.com/dex/sm/formats/lc/" style="color:#53145cs; font-size:28px; font-weight:600">Little Cup</a> ?
         </p>
         <div class="test-card">
           <pokemon-card

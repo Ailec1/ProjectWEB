@@ -219,7 +219,7 @@ ul {
 
 .rectangle {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   width: 500px;
   padding: 40px;

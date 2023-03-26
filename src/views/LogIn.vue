@@ -1,165 +1,99 @@
 <template>
-      <div
-        v-if="loginVisible"
-        class="rectangle"
-        :style="{ top: loginPosition }"
-      >
-        <h2>Log In</h2>
-        <p class="sentence">Please enter your Username and Password.</p>
-        <form>
-          <div class="box">
-            <input type="text" v-model="user.username" id="username" required="" />
-            <label>Username</label>
-          </div>
-
-          <div class="box">
-            <input v-model="user.password" type="password" id="typePasswordX" required="" />
-            <label>Password</label>
-          </div>
-          <button class="buttonlogin" type="submit" @click="login">Log In</button>
-          <span></span>
-          <div>
-            <div class="signup">
-              <p style="color:white">
-                Don't have an account ?               
-                <router-link class="sign" @click="signup">Sign Up</router-link>
-              </p>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <div v-if="loginVisible" class="overlay"></div>
-      <div class="content-container" :class="{ blurred: loginVisible }">
-        <!-- Contenu de votre page ici -->
-        <div class="tete">
-          <section>
-            <div class="principale">
-              <ul>
-                <li id="play">
-                  <router-link class="site" to="play">Play</router-link>
-                </li>
-                <li>
-                  <router-link class="site" to="pokedex">Pokedex</router-link>
-                </li>
-                <li>
-                  <router-link class="site" to="score">Score</router-link>
-                </li>
-              </ul>
-            </div>
-          </section>
+  <div class="content-container">
+    <!-- Contenu de votre page ici -->
+    <div class="tete">
+      <section>
+        <div class="principale">
+          <ul>
+            <li id="play">
+              <router-link class="site" to="play">Play</router-link>
+            </li>
+            <li>
+              <router-link class="site" to="pokedex">Pokedex</router-link>
+            </li>
+            <li>
+              <router-link class="site" to="score">Score</router-link>
+            </li>
+          </ul>
         </div>
-        <div id="text-zone">
-          <h1>Play</h1>
+      </section>
+    </div>
+  </div>
 
-          <div class="rubane" id="ruban-bulbizarre">
-            <img
-              class="pokemon-image"
-              src="../assets/Shuffle001.png"
-              alt="Description de l'image"
-            />
-            <div class="pokemon-text">
-              <router-link class="site" to="squirtgame">
-                <h4 class="pokemon-name">
-                  <a>BulbaPlay</a>
-                </h4>
-              </router-link>
-              <p class="pokemon-description">Play with Bulbasaur!</p>
-            </div>
-          </div>
-          
-          <div class="rubane" id="ruban-salameche">
-            <img
-              class="pokemon-image"
-              src="../assets/Shuffle004.png"
-              alt="Description de l'image"
-            />
-            <div class="pokemon-text">
-              <router-link class="site" to="squirtgame">
-                <h4 class="pokemon-name">Gamender</h4>
-              </router-link>
-              <p class="pokemon-description">Play with Charmander!</p>
-            </div>
-          </div>
-      
-
-          <div class="rubane" id="ruban-carapuce">
-            <img
-              class="pokemon-image"
-              src="../assets/Shuffle007.png"
-              alt="Description de l'image"
-            />
-            <div class="pokemon-text">
-              <router-link class="site" to="squirtgame">
-                <h4 class="pokemon-name">Squirtle's Aquatic Adventure</h4>
-              </router-link>
-              <p class="pokemon-description">Play with Squirtle!</p>
-            </div>
-          </div>
+  <body>
+    <div class="rectangle">
+    <h2>Log In</h2>
+    <p class="sentence">Please enter your Username and Password.</p>
+    <form>
+      <div class="box">
+        <input type="text" v-model="user.username" id="username" required="" />
+        <label>Username</label>
+      </div>
+      <div class="box">
+        <input
+          v-model="user.password"
+          type="password"
+          id="typePasswordX"
+          required=""
+        />
+        <label>Password</label>
+        <button class="buttonlogin" type="submit" @click="login">Log In</button>
+      </div>
+      <span></span>
+      <div>
+        <div class="signup">
+          <p style="color: white">
+            Don't have an account ?
+            <router-link to="signup" @click="signup" >Sign Up</router-link>
+          </p>
         </div>
       </div>
+    </form>
+    </div>
+  </body>
+
+
 </template>
   
   <script>
-import UserDataService from '@/services/UserDataService';
+import UserDataService from "@/services/UserDataService";
 export default {
   name: "PlayVue",
   data() {
     return {
-      loginPosition: "50%",
-      loginVisible: false,
-      blurBackground: false,
+      loginPosition: "100%",
       user: {
         username: "",
         password: "",
       },
     };
   },
-  mounted() {
-    setTimeout(() => {
-      this.loginVisible = true;
-    }, 100);
-    window.addEventListener("scroll", this.updateLoginPosition);
-    UserDataService.get(this.id)
-        .then(response => {
-          this.user = response.data
-          console.log(response.data)
-        })
-        .catch(e => {
-          console.log(e)
-        })
-  },
-  beforeMounted() {
-    window.removeEventListener("scroll", this.updateLoginPosition);
-  },
   methods: {
     signup() {
-      this.$router.push({ name: 'signup' })
+      this.$router.push({ name: "signup" });
     },
     login() {
-        const data = {
-          username: this.user.username,
-          password: this.user.password
-        }
-        console.log(data)
-        if (this.user.username === '' || this.user.password === '') return alert('Please fill in all fields')
-        else {
-          UserDataService.postLogin(data)
-            .then((response) => {
-              console.log(response.data.user)
-              // localStorage.setItem('token', response.data.token)
-              // this.$store.dispatch('user', response.user)
-              this.$router.push({ name: 'home' })
-            })
-            .catch(error => {
-              // Handle the error here
-              alert('Woulah ca marche pas')
-              alert(error + 'woulah ca marche pas')
-            })
-        }
-      },
-    updateLoginPosition() {
-      this.loginPosition = `${50 + window.pageYOffset / 8}%`;
+      const data = {
+        username: this.user.username,
+        password: this.user.password,
+      };
+      console.log(data);
+      if (this.user.username === "" || this.user.password === "")
+        return alert("Please fill in all fields");
+      else {
+        UserDataService.postLogin(data)
+          .then((response) => {
+            console.log(response.data.user);
+            // localStorage.setItem('token', response.data.token)
+            // this.$store.dispatch('user', response.user)
+            this.$router.push({ name: "home" });
+          })
+          .catch((error) => {
+            // Handle the error here
+            alert("Woulah ca marche pas");
+            alert(error + "woulah ca marche pas");
+          });
+      }
     },
   },
 };
